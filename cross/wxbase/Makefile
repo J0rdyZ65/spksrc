@@ -18,11 +18,6 @@ CONFIGURE_ARGS = --prefix=$(STAGING_INSTALL_PREFIX) \
 
 include ../../mk/spksrc.cross-cc.mk
 
+# Custom install target to not override the installation prefixes set by configure
 install_destdir_target: $(PRE_INSTALL_TARGET)
 	$(RUN) $(MAKE) install
-
-# CUSTOM: Override the default target in order to pass the 'HOST_SUFFIX=' flag,
-# CUSTOM: otherwise wxbase will insert the target specific string into the library names!
-arch-%:
-	@$(MSG) Building package for arch $(subst arch-,,$@)
-	-@MAKEFLAGS='HOST_SUFFIX=' $(MAKE) ARCH=$(subst arch-,,$@)
