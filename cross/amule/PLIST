@@ -1,0 +1,10 @@
+bin:bin/amulecmd
+bin:bin/ed2k
+shr:share/doc/amule/ABOUT-NLS
+shr:share/doc/amule/amulesig.txt
+shr:share/doc/amule/Changelog
+shr:share/doc/amule/EC_Protocol.txt
+shr:share/doc/amule/INSTALL
+shr:share/doc/amule/license.txt
+shr:share/doc/amule/README
+shr:share/doc/amule/TODO
